@@ -17,9 +17,10 @@ const Footer = () => {
 
         try {
 
-            const data = await axios.post('http://localhost:4000/api/openAiResponse', {
+            const data = await axios.post('http://localhost:3000/api/OpenAi', {
                 question: userSearch
             });
+            console.log(data)
             setAiAns('')
             if (!data.data.message) alert("no data found")
             setAiAns(data.data.message);
