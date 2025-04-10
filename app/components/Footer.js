@@ -17,7 +17,7 @@ const Footer = () => {
 
         try {
 
-            const data = await axios.post('http://localhost:3000/api/OpenAi', {
+            const data = await axios.post('https://open-ai-three-eta.vercel.app/api/OpenAi', {
                 question: userSearch
             });
             console.log(data)
